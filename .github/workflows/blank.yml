@@ -9,5 +9,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: docker test
+      - name: docker version
         run: docker -v
+      - name: docker build test1
+        run: docker build -t test1  -f Dockerfile.a .
+      - name: docker build test2
+        run: docker build -t test2  -f Dockerfile.b .
+      - name: docker test
+        run: |
+          docker images
+          docker run --rm test2 /bin/ls
