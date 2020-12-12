@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  GIT_URL: "${{ env.GITHUB_SERVER_URL }}${{ github.repository }}.git"
+  GIT_URL: "${{ github.repository }}.git"
 
 jobs:
   build:
