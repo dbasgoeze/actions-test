@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo path
-        run: echo ${{ GIT_URL }}
+        run: echo ${GIT_URL}
       - uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
